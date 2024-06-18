@@ -4,21 +4,8 @@ import axios from "axios";
 
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
-// qweqwe123@gmail.com
-// Faust228_1488
+// Venceslav@gmail.com
 
-// export const register = createAsyncThunk(
-//   "auth/register",
-//   async (newUser, thunkAPI) => {
-//     try {
-//       const res = await axios.post("/users/signup", newUser);
-//     //   setAuthHeader(res.data.token);
-//       return res.data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
 
 export const register = createAsyncThunk("auth/register", async (newUser, thunkAPI) => {
    try {
@@ -27,4 +14,13 @@ export const register = createAsyncThunk("auth/register", async (newUser, thunkA
    } catch (e) {
     return thunkAPI.rejectWithValue(e.message)
    }
+})
+
+export const logIn = createAsyncThunk("auth/logIn", async (userInfo, thunkAPI) => {
+    try {
+        const res = await axios.post("/users/login", userInfo)
+        return res.data
+    } catch (e) {
+        return thunkAPI.rejectWithValue(e.message)
+    }
 })
