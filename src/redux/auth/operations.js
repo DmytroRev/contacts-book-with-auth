@@ -5,7 +5,7 @@ import axios from "axios";
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
 // qweqwe123@gmail.com
-// Faust233_1499
+// Faust228_1488
 
 // export const register = createAsyncThunk(
 //   "auth/register",
