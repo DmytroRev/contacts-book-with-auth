@@ -1,16 +1,17 @@
 import { IoMdContact } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
-import { deleteContact } from "../../redux/contactsOps";
+// import { deleteContact } from "../../redux/contactsOps";
+// import deleteContact
 
 import css from "./Contact.module.css";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 
 export const Contact = ({ item: { name, number, id } }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleDelete = () => {
-    dispatch(deleteContact(id));
-  };
+  // const handleDelete = () => {
+  //   dispatch(deleteContact(id));
+  // };
 
   return (
     <div className={css.container}>
