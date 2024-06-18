@@ -3,15 +3,7 @@ import { useDispatch } from "react-redux";
 // import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
 
-// const validationSchema = Yup.object().shape({
-//   name: Yup.string().required("Required"),
-//   email: Yup.string().email("Invalid email").required("Required"),
-//   password: Yup.string()
-//     .min(6, "Password must be at least 6 characters")
-//     .required("Required"),
-// });
-
-export const RegistrationForm = () => {
+export default function RegistrationForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
@@ -26,7 +18,6 @@ export const RegistrationForm = () => {
         email: "",
         password: "",
       }}
-      // validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       <Form autoComplete="off">
@@ -46,4 +37,4 @@ export const RegistrationForm = () => {
       </Form>
     </Formik>
   );
-};
+}

@@ -1,5 +1,6 @@
 import { PageTitle } from "../../components/PageTitle/PageTitle";
-import { RegistrationForm } from "../../components/RegistrationForm/RegistrationForm";
+// import { RegistrationForm } from "../../components/RegistrationForm/RegistrationForm";
+import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 
 export const RegistrationPage = () => {
   return (
