@@ -16,15 +16,11 @@ const authPersistConfig = {
   whitelist: ["token"]
 }
 
-// const saveContactPersist = { 
-//   key: "contactValue",
-//   storage,
-//   whitelist: ["items"]
-// }
+
  
 const persistedReducer = persistReducer(authPersistConfig, authReducer)
 
-// const contactPersistedReducer = persistReducer(saveContactPersist, contactsReducer)
+
 
 export const store = configureStore({
   reducer: {

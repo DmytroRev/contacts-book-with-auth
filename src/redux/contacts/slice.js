@@ -57,14 +57,14 @@ const contactsSlice = createSlice({
         );
       })
       .addCase(deleteContact.rejected, (state, action) => {
-        state.loadingoading = false;
+        state.loading = false;
         state.error = action.payload;
       })
       .addCase(logOut.fulfilled, (state) => {
         state.items = []
         state.loading = false
         state.error = null
-  })
+      })
   },
 });
 
