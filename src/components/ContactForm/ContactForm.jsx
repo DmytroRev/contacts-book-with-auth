@@ -4,6 +4,7 @@ import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
 import { useId } from "react";
+import toast from "react-hot-toast";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -27,7 +28,20 @@ export default function ContactForm() {
   };
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact(values));
+    dispatch(addContact(values))
+      .unwrap()
+      .then(() => {
+        toast.success("Successful!", {
+          style: { backgroundColor: "silver" },
+          position: "top-center",
+        });
+      })
+      .catch(() => {
+        toast.error("Try again.", {
+          style: { backgroundColor: "orangered" },
+          position: "top-center",
+        });
+      });
     actions.resetForm();
   };
 

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectError, selectLoading } from "../../redux/contacts/selectors";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";
-export const ContactsPage = () => {
+export default function ContactsPage() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
   const isError = useSelector(selectError);
@@ -23,4 +23,4 @@ export const ContactsPage = () => {
       {isError && <div>Error...</div>}
     </div>
   );
-};
+}
