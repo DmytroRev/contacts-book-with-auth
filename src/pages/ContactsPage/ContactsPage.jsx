@@ -8,6 +8,7 @@ import { fetchContacts } from "../../redux/contacts/operations";
 import css from "./ContactsPage.module.css";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import EditForm from "../../components/EditForm/EditForm";
+import ModalComponent from "../../components/ModalComponent/ModalComponent";
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ export default function ContactsPage() {
       {isLoading && <div>Loading...</div>}
       <ContactList onEdit={handleEdit} />
       {isError && <div>Error...</div>}
+      <ModalComponent />
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.title{
+    color: black;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnYes {
+    cursor: pointer;
+    border: 1px solid silver;
+    /* background-color: transparent; */
+}
+.btnYes:hover {
+    background-color: #a3d7a9;
+}
+
+.btnNo {
+    cursor: pointer;
+        border: 1px solid silver;
+}
+
+.btnNo:hover {
+    background-color: orangered;
+}

@@ -1,21 +1,24 @@
 import { IoMdContact } from "react-icons/io";
-import { FaPhone } from "react-icons/fa6";
-// import { deleteContact } from "../../redux/contactsOps";
-import { deleteContact } from "../../redux/contacts/operations";
+// import { deleteContact } from "../../redux/contacts/operations";
 
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { LiaEditSolid } from "react-icons/lia";
+import { openModal } from "../../redux/modal/slice";
 
 export const Contact = ({ onEdit, item }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(item.id);
 
-  const handleDelete = () => {
-    dispatch(deleteContact(item.id));
-  };
+  // const handleDelete = () => {
+  //   dispatch(deleteContact());
+  // };
   const handleEdit = () => {
     onEdit(item);
+  };
+
+  const handleOpenModal = () => {
+    dispatch(openModal(item.id));
   };
   return (
     <div className={css.container}>
@@ -27,7 +30,7 @@ export const Contact = ({ onEdit, item }) => {
         <p className={css.icon}>{item.number}</p>
       </div>
       <div className={css.containerBtn}>
-        <button className={css.btn} onClick={handleDelete}>
+        <button className={css.btn} onClick={handleOpenModal}>
           <RiDeleteBin6Line />
         </button>
         <button className={css.btn} onClick={handleEdit}>
