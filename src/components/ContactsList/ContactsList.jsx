@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import { visibleContacts } from "../../redux/contacts/slice";
 
-export const ContactList = () => {
+export const ContactList = ({ onEdit }) => {
   const filter = useSelector(visibleContacts);
 
   // const filterContacts = contacts.filter((contact) =>
@@ -16,7 +16,7 @@ export const ContactList = () => {
       {filter.map((item) => {
         return (
           <li key={item.id}>
-            <Contact item={item} />
+            <Contact item={item} onEdit={onEdit} />
           </li>
         );
       })}

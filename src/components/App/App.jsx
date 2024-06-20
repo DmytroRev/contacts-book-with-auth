@@ -28,7 +28,7 @@ export default function App() {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  if (isRefreshing) null;
+  if (isRefreshing) return null;
 
   return (
     <Layot>

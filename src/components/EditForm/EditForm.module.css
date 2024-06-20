@@ -1,0 +1,38 @@
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.list {
+    margin-bottom: 10px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 300px;
+    height: 35px;
+    background-color: silver;
+
+}
+
+.containerBtn {
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    width: 105px;
+    height: 25px;
+}
