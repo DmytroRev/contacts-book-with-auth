@@ -2,7 +2,8 @@
     padding: 50px;
     display: flex;
     flex-direction: column;
-
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../src/images/Phones-3.jpg);
+    background-size: cover;
     align-items: center;
     text-align: center;
 }

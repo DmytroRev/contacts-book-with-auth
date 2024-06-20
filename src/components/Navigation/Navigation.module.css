@@ -1,3 +1,26 @@
-/* .container {
+.container {
     display: flex;
-} */
+}
+
+.list {
+    display: flex;
+    gap: 70px;
+}
+
+.link {
+    fill: silver;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 5px;
+/* margin-left: 570px; */
+font-family: "Playwrite ES", cursive;
+font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    position: fixed;
+    left: 710px;
+}

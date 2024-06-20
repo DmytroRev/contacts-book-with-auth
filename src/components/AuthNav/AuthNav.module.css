@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+.container a {
+    text-decoration: none;
+        font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            color: silver;
+}
+
