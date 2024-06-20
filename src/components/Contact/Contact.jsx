@@ -5,6 +5,8 @@ import { deleteContact } from "../../redux/contacts/operations";
 
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { LiaEditSolid } from "react-icons/lia";
 
 export const Contact = ({ item: { name, number, id } }) => {
   const dispatch = useDispatch();
@@ -26,7 +28,12 @@ export const Contact = ({ item: { name, number, id } }) => {
         </p>
       </div>
       <div>
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleDelete}>
+          <RiDeleteBin6Line />
+        </button>
+        <button>
+          <LiaEditSolid />
+        </button>
       </div>
     </div>
   );

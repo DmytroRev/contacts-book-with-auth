@@ -2,7 +2,7 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { selectContacts } from "./selectors";
 import { selectFilter } from "../filters/selectors";
-import { addContact, deleteContact, fetchContacts } from "./operations";
+import { addContact, changeContact, deleteContact, fetchContacts } from "./operations";
 import { logOut } from "../auth/operations";
 
 
@@ -65,6 +65,22 @@ const contactsSlice = createSlice({
         state.loading = false
         state.error = null
       })
+      .addCase(changeContact.pending, (state) => {
+        state.error = false;
+        state.loading
+      })
+      .addCase(changeContact.fulfilled, (state, action) => {
+      const index = state.items.findIndex(
+          contact => contact.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.items[index] = action.payload;
+        }
+      })
+      .addCase(changeContact.rejected, (state, action) => {
+      state.loading = false;
+        state.error = action.payload;
+    })
   },
 });
 

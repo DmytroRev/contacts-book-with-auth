@@ -1,4 +1,4 @@
-.container {
+/* .container {
     margin-bottom: 30px;
 }
 
@@ -10,4 +10,11 @@
     width: 294px;
     height: 20px;
     border-radius: 4px;
+} */
+
+.input {
+    width: 300px;
+    height: 35px;
+    background-color: silver;
+margin-top: 10px;
 }

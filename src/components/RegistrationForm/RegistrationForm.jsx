@@ -2,6 +2,7 @@ import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 import toast from "react-hot-toast";
+import css from "./RegistrationForm.module.css";
 
 export default function RegistrationForm() {
   const dispatch = useDispatch();
@@ -33,20 +34,22 @@ export default function RegistrationForm() {
       }}
       onSubmit={handleSubmit}
     >
-      <Form autoComplete="off">
-        <label>
+      <Form autoComplete="off" className={css.container}>
+        <label className={css.label}>
           Username
-          <Field type="text" name="name" />
+          <Field type="text" name="name" className={css.input} />
         </label>
-        <label>
+        <label className={css.label}>
           Email
-          <Field type="email" name="email" />
+          <Field type="email" name="email" className={css.input} />
         </label>
-        <label>
+        <label className={css.label}>
           Password
-          <Field type="password" name="password" />
+          <Field type="password" name="password" className={css.input} />
         </label>
-        <button type="submit">Register</button>
+        <button className={css.btn} type="submit">
+          Register
+        </button>
       </Form>
     </Formik>
   );

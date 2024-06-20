@@ -1,14 +1,7 @@
-
 .container {
-    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-}
-
-.list {
-    margin-bottom: 10px;
 }
 
 .label {
@@ -33,19 +26,4 @@
     align-items: center;
     margin-top: 20px;
     height: 25px;
-    margin-bottom: 20px;
-}
-
-.error {
-    position: absolute;
-    top: 66px;
-    right: 0;
-    color: red;
-}
-
-.errorNum {
-    position: absolute;
-    top: 140px;
-    right: 0;
-    color: red;
 }

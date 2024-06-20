@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
 import { useId } from "react";
 import toast from "react-hot-toast";
+import { IoMdPersonAdd } from "react-icons/io";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -52,24 +53,28 @@ export default function ContactForm() {
       validationSchema={validationControl}
     >
       <Form className={css.container}>
-        <div className={css.containerList}>
-          <label htmlFor={nameFieldId}>Name</label>
+        <div className={css.list}>
+          <label htmlFor={nameFieldId} className={css.label}>
+            Name
+          </label>
           <Field
-            className={css.contactFormInput}
             id={nameFieldId}
             type="text"
             name="name"
+            className={css.input}
           />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
 
-        <div className={css.containerList}>
-          <label htmlFor={numberFieldId}>Number</label>
+        <div>
+          <label htmlFor={numberFieldId} className={css.label}>
+            Number
+          </label>
           <Field
-            className={css.contactFormInput}
             id={numberFieldId}
             type="tel"
             name="number"
+            className={css.input}
           />
           <ErrorMessage
             className={css.errorNum}
@@ -78,8 +83,8 @@ export default function ContactForm() {
           />
         </div>
 
-        <button type="submit" className={css.btnForm}>
-          Add contact
+        <button type="submit" className={css.btn}>
+          <IoMdPersonAdd />
         </button>
       </Form>
     </Formik>

@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectError, selectLoading } from "../../redux/contacts/selectors";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";
+import css from "./ContactsPage.module.css";
+import { PageTitle } from "../../components/PageTitle/PageTitle";
+
 export default function ContactsPage() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
@@ -14,10 +17,12 @@ export default function ContactsPage() {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
+    <div className={css.container}>
+      <div className={css.border}>
+        <PageTitle>Phonebook</PageTitle>
+        <ContactForm />
+        <SearchBox />
+      </div>
       {isLoading && <div>Loading...</div>}
       <ContactList />
       {isError && <div>Error...</div>}

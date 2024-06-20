@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    position: relative;
 }
 
 .list {
@@ -21,6 +22,9 @@ font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     color: white;
-    position: fixed;
-    left: 710px;
+    /* position: fixed;
+     */
+    position: absolute;
+    left: 675px;
+    width: 135px;
 }
